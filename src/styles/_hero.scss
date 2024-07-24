@@ -1,0 +1,16 @@
+// hero é o banner no fundo
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh; 
+    background-image: url(../images/hero_desktop.jpeg);
+    text-align: center;
+
+    &__content {
+        max-width: 640px;
+
+        &__branding {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+}
