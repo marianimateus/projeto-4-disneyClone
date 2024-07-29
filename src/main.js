@@ -20,7 +20,6 @@ function removeBotaoAtivo() {
         buttons[i].classList.remove('shows__tabs__button--is-active');
     }
 }
-
 function escondeTodasAbas() {
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
