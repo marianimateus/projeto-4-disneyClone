@@ -10,13 +10,11 @@
 
     &--is-hidden {
         background-color: transparent;
-        transition: background-color .5s ease;
 
         .header {
             &__logo, &__links__item:first-child {
                 opacity: 0;
-                visibility: hidden;        
-                transition: opacity .5s ease;
+                visibility: hidden;
             }
         }
     }
@@ -25,6 +23,10 @@
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 1px 12px 1px 20px;
+        }
     }
 
     &__logo {
@@ -32,11 +34,17 @@
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;
+
+        @media (max-width: 768px) {
+            max-width: 64px;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__links {
         display: flex;
-        
+
         &__item {
             margin: 5px;
             transition: opacity .5s ease;
@@ -45,5 +53,12 @@
 
     .button {
         height: 50px;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
     }
 }
