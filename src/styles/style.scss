@@ -7,10 +7,10 @@
 @use 'footer';
 @use 'header';
 
-@font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
-    font-weight: 400;
+@font-face {  // define uma fonte diferente
+    font-family: Avenir; // define o nome da fonte
+    src: url(../../assets/fonts/Avenir-Regular.woff2); // define o caminho da fonte
+    font-weight: 400; // define o "peso" da fonte 
 }
 
 @font-face {
@@ -32,13 +32,13 @@ body {
     background-color: variaveis.$corDeFundo;
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text($fontSize: 16px) { // Na definição deste mixin é possível alterar também o line-height e o color, com o valor dentro dos parênteses sendo somado com 10 para o line-height e para o color sendo definida uma cor específica
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
 
-@mixin title($fontSize: 40px) {
+@mixin title($fontSize: 40px) { // Na definição deste, esta incluso o mixin anterior, fazendo com que os "40px" de $font-size do TEXT ja somados sejam aplicados ao TITLE
     @include text($fontSize);
     color: variaveis.$corTextoSecundario;
 }
@@ -110,7 +110,7 @@ body {
     border-radius: 4px;
     text-decoration: none;
     padding: 8px 14px;
-    letter-spacing: 1px;
+    letter-spacing: 1px; // Define um espaço entre as letras
     border: 1px solid variaveis.$corDeFundoBotaoPrimario;
 
     &:hover {

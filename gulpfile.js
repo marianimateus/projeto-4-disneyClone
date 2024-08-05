@@ -3,10 +3,10 @@ const sass = require('gulp-sass')(require ("sass"));
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
-function scripts() {
-    return gulp.src('./src/scripts/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
+function scripts() { // Definindo a função 
+    return gulp.src('./src/scripts/*.js') // buscando o(s) arquivo(s)
+        .pipe(uglify()) // executando o uglify
+        .pipe(gulp.dest('./dist/js')) // Definindo o destino
 }
 
 function styles() {
